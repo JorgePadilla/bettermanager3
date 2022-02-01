@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journey: one
+  product_type: MyString
+  name: MyString
+  launch_days_offset: 1
+  event_datys_offset: 1
+
+two:
+  journey: two
+  product_type: MyString
+  name: MyString
+  launch_days_offset: 1
+  event_datys_offset: 1

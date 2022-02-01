@@ -1,0 +1,29 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Journey
+      %th Product type
+      %th Name
+      %th Launch days offset
+      %th Event days offset
+      %th
+      %th
+      %th
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.journey.name
+        %td= product.product_type
+        %td= product.name
+        %td= product.launch_days_offset
+        %td= product.event_days_offset
+        %td= link_to 'Show', product
+        %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_product_path

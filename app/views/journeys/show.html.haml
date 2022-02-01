@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @journey.name
+%p
+  %b Start date:
+  = @journey.start_date
+
+= link_to 'Edit', edit_journey_path(@journey)
+\|
+= link_to 'Back', journeys_path
