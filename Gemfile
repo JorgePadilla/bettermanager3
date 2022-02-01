@@ -73,3 +73,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'jquery-rails'
+gem "haml-rails", "~> 2.0"
+gem 'fullcalendar-rails'
