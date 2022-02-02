@@ -6,6 +6,18 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def mc_json
+    events = []
+    @products = Product.includes(:journey)
+    @products.each do |p|
+     events << {
+       title: p.name,
+       start: p.journey.start_date
+     }
+    end
+    render plain: events.to_json
+  end
+
   # GET /products/1 or /products/1.json
   def show
   end

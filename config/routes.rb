@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  delete '/users/sign_out' => 'devise/sessions#destroy'
   resources :products
   resources :journeys do
     resources :products
   end
   devise_for :users
-  get 'home/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
+ 
+  get 'home/index'
   root "home#index"
+  get "/mc", to: "products#mc_json"
 end
