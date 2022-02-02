@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   delete '/users/sign_out' => 'devise/sessions#destroy'
+  resources :products
   resources :journeys do
     resources :products
   end
