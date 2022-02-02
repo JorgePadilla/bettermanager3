@@ -4,20 +4,6 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
 
-window.onload = function() {
-  if (window.jQuery) {  
-      // jQuery is loaded  
-      alert("Yeah!");
-  } else {
-      // jQuery is not loaded
-      alert("Doesn't Work");
-  }
-}
-
-// let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))  
-// let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {  
-//   return new bootstrap.Popover(popoverTriggerEl)  
-// })  
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   // var calendar = new FullCalendar.Calendar(calendarEl, {
