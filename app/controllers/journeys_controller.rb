@@ -1,5 +1,5 @@
 class JourneysController < ApplicationController
-  before_action :set_journey, only: %i[ show edit update destroy ]
+  before_action :set_journey, only: %i[ show edit update destroy ], :authenticate_user!
 
   # GET /journeys or /journeys.json
   def index
