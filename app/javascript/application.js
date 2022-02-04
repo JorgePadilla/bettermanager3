@@ -3,8 +3,10 @@ import './add_jquery'
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
+Turbo.session.drive = false
 
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener("DOMContentLoaded", function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {

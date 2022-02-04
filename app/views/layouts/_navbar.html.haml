@@ -6,7 +6,7 @@
     #navbarNav.collapse.navbar-collapse
       %ul.navbar-nav
         %li.nav-item
-          = link_to 'Home', root_path, class: 'nav-link active', data: { turbolinks: false }
+          = link_to 'Home', root_path, class: 'nav-link active', remote: true 
         %li.nav-item
           = link_to 'Journeys', journeys_path, class: 'nav-link'
         %li.nav-item
