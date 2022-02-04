@@ -10,10 +10,12 @@ class ProductsController < ApplicationController
     events = []
     @products = Product.includes(:journey)
     @products.each do |p|
-     events << {
-       title: p.name,
-       start: p.journey.start_date
-     }
+      p.event_days_offset.times{ |index| 
+        events << {
+          title: p.name + ' ' + index.to_s,
+          start: (p.journey.start_date + p.launch_days_offset.days) + index.days
+        }
+      }
     end
     render plain: events.to_json
   end
