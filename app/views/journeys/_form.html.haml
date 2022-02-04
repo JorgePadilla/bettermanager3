@@ -6,11 +6,11 @@
         - @journey.errors.full_messages.each do |message|
           %li= message
 
-  .field
+  .field.my-4
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name , class: 'form-control form-control-lg'
+  .field.my-4
     = f.label :start_date
-    = f.datetime_field :start_date
+    = f.datetime_field :start_date, class: 'form-control form-control-lg'
   .actions
     = f.submit 'Save'

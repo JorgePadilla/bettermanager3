@@ -6,20 +6,20 @@
         - @product.errors.full_messages.each do |message|
           %li= message
 
-  .field
+  .field.my-4
     = f.label :journey
-    = f.select :journey_id, options_for_select(Journey.all.map{|s|[s.name, s.id]})
-  .field
+    = f.select :journey_id, options_for_select(Journey.all.map{|s|[s.name, s.id]}), class: 'form-control form-control-lg'
+  .field.my-4
     = f.label :product_type
-    = f.select :product_type, ["Group Training","Coaching"]
-  .field
+    = f.select :product_type, ["Group Training","Coaching"], class: 'form-control form-control-lg'
+  .field.my-4
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: 'form-control form-control-lg'
+  .field.my-4
     = f.label :launch_days_offset
-    = f.number_field :launch_days_offset
-  .field
+    = f.number_field :launch_days_offset, class: 'form-control form-control-lg'
+  .field.my-4
     = f.label :event_days_offset
-    = f.number_field :event_days_offset
+    = f.number_field :event_days_offset, class: 'form-control form-control-lg'
   .actions
     = f.submit 'Save'
