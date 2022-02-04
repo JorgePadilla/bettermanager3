@@ -13,7 +13,8 @@ class ProductsController < ApplicationController
       p.event_days_offset.times{ |index| 
         events << {
           title: p.name + ' ' + index.to_s,
-          start: (p.journey.start_date + p.launch_days_offset.days) + index.days
+          start: (p.journey.start_date + p.launch_days_offset.days) + index.days,
+          color: p.product_type === 'Group Training' ? 'purple' : 'green' 
         }
       }
     end
